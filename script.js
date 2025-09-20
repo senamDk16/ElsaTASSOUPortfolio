@@ -1,6 +1,5 @@
-
-const navMobile = document.querySelector("#navMobile")
-
+const menuToggle = document.querySelector("#menu-toggle")
+const menuMobile = document.querySelector("#mobile-menu")
 const showMenu = ()=>{
-    navMobile.classList.toggle("translate-x-full")
+    menuMobile.classList.toggle("")
 }

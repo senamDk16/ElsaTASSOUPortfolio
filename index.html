@@ -1,52 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PorFolio Elsa TASSOU</title>
     <script src="./scriptTaillwindcss.js"></script>
-</head>
-<body>
-<header class="p-6 w-11/12 sm:w-10/12 h-16 bg-pink-600 rounded-full mx-auto mt-3 sm:mt-5 flex items-center justify-between">
-    <div class="text-white font-semibold">
-        Elsa TASSOU
-    </div>
-    <div class="text-white hidden sm:flex flex-row gap-4 text-lg font-bold">
-        <a href="#">Accueil</a>
+  </head>
+  <body>
+    <header
+      class="relative p-6 w-11/12 sm:w-10/12 h-16 bg-pink-600 rounded-full mx-auto mt-3 sm:mt-5 flex items-center justify-between"
+    >
+      <div class="text-white font-semibold">Elsa TASSOU</div>
+      <div class="text-white hidden sm:flex flex-row gap-4 text-lg font-bold">
+        <a href="#home">Accueil</a>
         <a href="#">Services</a>
         <a href="#">À propos</a>
         <a href="#">Projets</a>
         <a href="#">Contact</a>
-    </div>
-    <div id="mobile-menu" class="absolute transition-transform duration-300 transform translate-x-full top-full left-0 w-full bg-pink-600 text-white p-4 border-t-2 flex flex-col gap-4 text-lg font-bold sm:hidden">
-        <a href="#">Accueil</a>
+      </div>
+      <div
+        id="mobile-menu"
+        class="absolute transition-transform duration-300 -z-10 top-full rounded-xl translate-x-full  w-10/12 bg-pink-600 text-white p-4 border-t-2 hidden flex-col gap-4 text-lg font-bold sm:hidden"
+      >
+        <a href="#home">Accueil</a>
         <a href="#">Services</a>
         <a href="#">À propos</a>
         <a href="#">Projets</a>
         <a href="#">Contact</a>
-    </div>
-    <div class="bg-white rounded-full w-32 h-8 hidden sm:flex items-center justify-center text-pink-500 cursor-pointer">
+      </div>
+      <div
+        class="bg-white rounded-full w-32 h-8 hidden sm:flex items-center justify-center text-pink-600 cursor-pointer"
+      >
         Contactez-moi
-    </div>
-    <button id="menu-toggle" class="sm:hidden w-8 h-8 flex flex-col gap-2 focus:outline-none" aria-controls="mobile-menu" aria-expanded="false">
+      </div>
+      <button
+        id="menu-toggle"
+        class="sm:hidden w-8 h-8 flex flex-col gap-2 focus:outline-none"
+        aria-controls="mobile-menu"
+        aria-expanded="false"
+      >
         <span class="block w-full bg-white h-[2px]"></span>
         <span class="block w-full bg-white h-[2px]"></span>
         <span class="block w-full bg-white h-[2px]"></span>
-    </button>
-</header>
+      </button>
+    </header>
 
-<script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
+    <section id="home" class="w-full mt-5">
+        <div class="w-11/12 h-12 m-auto">
 
-    menuToggle.addEventListener('click', () => {
-        const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
-        menuToggle.setAttribute('aria-expanded', !isExpanded);
-        mobileMenu.classList.toggle('translate-x-full');
-    });
-</script>
-    <section id="home" class="w-full">
+            <div class="flex flex-col sm:flex-row items-center justify-around gap-5 sm:-gap-0">
 
+                <div class="flex flex-col sm:w-1/2 gap-3 ">
+                    
+                    <div>
+                        Bonjour à vous!
+                    </div>
+
+                    <h1 class=" text-3xl sm:text-4xl">Je suis <span class="text-pink-600 font-semibold underline">Elsa TASSOU</span>.</h1>
+                    <div class="text-3xl sm:text:4xl"> 
+                        Psychologue passionnée et crée des contenus digitaux impactants et créatifs.
+                    </div>
+                    <div class="text-sm">
+                        Étudiante en psychologie passionnée par la communication,
+                        crée des contenus digitaux impactants et créatifs.
+                        Expérience dans la gestion de réseaux sociaux, la production
+                        vidéo, et la communication.
+                    </div>
+                    <div class="flex flex-row gap-2">
+                        <button class="bg-pink-600 text-white px-4 py-2 rounded-xl">Voir le CV</button>
+                        <button class="border border-pink-600  px-4 py-2 rounded-xl text-pink-600">Hire Me</button>
+                    </div>  
+                </div>
+                <div class="sm:w-1/2 h-96 "> 
+                    <img src="./img/7D6A1453.JPG" alt="Elsa TASSOU img" class="w-full h-full object-contain"/>
+                </div>
+
+            </div>
+        </div>
     </section>
-</body>
+  </body>
 </html>
