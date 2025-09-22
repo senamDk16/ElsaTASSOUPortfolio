@@ -1,69 +1,372 @@
 <!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PortFolio ELSA TASSOU</title>
-  <script src="./scriptTaillwindcss.js"></script>
-</head>
-<body class="scroll-smooth">
-  <header class="w-screen m-auto bg-pink-600 py-6 px-4  flex flex-row items-center justify-between relative">
-    <div class="text-white text-xl">
-      TASSOU ELSA
-    </div>
-    <button id="btnMenu" class="sm:hidden flex flex-col gap-2 w-8 h-8" aria-expanded="false">
-      <div class="w-full h-1 bg-white"></div>
-      <div class="w-full h-1 bg-white"></div>
-      <div class="w-full h-1 bg-white"></div>
-    </button>
+<html lang="fr" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | ELSA TASSOU</title>
+    <link rel="shortcut icon" href="./images/4x/Fichier 14@4x.png" type="image/x-icon">
+    <script src="./scriptTailwindcss.js"></script>
+  </head>
+  <body class="bg-gray-900 text-white font-sans scroll-smooth">
+    <header class="bg-gray-900 text-white shadow-lg sticky top-0 z-50">
+    <nav
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+    >
+        <a
+        href="#hero"
+        class="text-2xl font-bold text-pink-500 hover:text-pink-400 transition-colors"
+        >ELSA TASSOU</a
+        >
 
-    <nav class="hidden sm:flex flex-row space-x-3 text-white">
-      <a href="#home" class="delay-300 hover:text-xl transition-all">Accuiel</a>
-      <a href="#" class="delay-300 hover:text-xl transition-all">A propos</a>
-      <a href="#" class="delay-300 hover:text-xl transition-all">Services</a>
-      <a href="#" class="delay-300 hover:text-xl transition-all">skills</a>
-      <a href="#" class="delay-300 hover:text-xl transition-all">portfolio</a>
-      <a href="#" class="delay-300 hover:text-xl transition-all">contact</a>
+        <button id="menu-button" class="md:hidden focus:outline-none">
+        <svg
+            class="w-8 h-8 text-white"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16m-7 6h7"
+            ></path>
+        </svg>
+        </button>
+
+        <ul id="menu" class="hidden md:flex md:items-center space-x-6">
+        <li>
+            <a href="#hero" class="hover:text-pink-500 transition-colors"
+            >Accueil</a
+            >
+        </li>
+        <li>
+            <a href="#about" class="hover:text-pink-500 transition-colors"
+            >À propos</a
+            >
+        </li>
+        <li>
+            <a href="#skills" class="hover:text-pink-500 transition-colors"
+            >Compétences</a
+            >
+        </li>
+        <li>
+            <a href="#projects" class="hover:text-pink-500 transition-colors"
+            >Projets</a
+            >
+        </li>
+        <li>
+            <a
+            href="#social-media"
+            class="hover:text-pink-500 transition-colors"
+            >Réseaux</a
+            >
+        </li>
+        <li>
+            <a href="#contact" class="hover:text-pink-500 transition-colors"
+            >Contact</a
+            >
+        </li>
+        </ul>
     </nav>
 
-    <nav id="navMobile" class="sm:hidden flex flex-col space-x-4 text-white absolute bg-pink-600 right-0 top-full p-4 w-6/12 h-screen text-2xl translate-x-full delay-300 transition-transform">
-      <a href="#home">Accuiel</a>
-      <a href="#">A propos</a>
-      <a href="#">Services</a>
-      <a href="#">skills</a>
-      <a href="#">portfolio</a>
-      <a href="#">contact</a>
-    </nav>
+    <div id="mobile-menu" class="hidden md:hidden w-full bg-gray-800 py-4">
 
-    <button class="text-xl bg-white text-pink-600 px-5 cursor-pointer hidden sm:flex  py-1 rounded-xl">
-      Contact
-    </button>
-  </header>
-  <div id="home" class="w-screen">
-    <div class="w-11/12 m-auto">
-      <div>
-        <p>Bonjour</p>
-        <div>
-          Je suis <span>Elsa TASSOU</span>
-        </div>
-        <div>
-          Communicatrice créative et engagée, je développe des stratégies de communication adaptées aux besoins des
-          organisations et projets que j'accompagne
-        </div>
-        <div class="flex items-center gap-3">
-          <a href="./img/Elsa akouvi fafali TASSOU_20250921_200332_0000.pdf" target="_blank">
-            <button class=" bg-pink-600 text-white px-5 cursor-pointer flex  py-1 rounded-xl">Voir CV</button>
-          </a>
-          <a href="./img/Elsa akouvi fafali TASSOU_20250921_200332_0000.pdf" target="_blank">
-            <button class="border border-pink-600 bg-white text-pink-600 px-5 cursor-pointer flex  py-1 rounded-xl">Voir CV</button>
-          </a>
-        </div>
-      </div>
+        <ul class="flex flex-col items-center space-y-4">
+        <li>
+            <a href="#hero" class="hover:text-pink-500 transition-colors"
+            >Accueil</a
+            >
+        </li>
+        <li>
+            <a
+            href="#about"
+            class="block text-xl hover:text-pink-500 transition-colors"
+            >À propos</a
+            >
+        </li>
+        <li>
+            <a
+            href="#skills"
+            class="block text-xl hover:text-pink-500 transition-colors"
+            >Compétences</a
+            >
+        </li>
+        <li>
+            <a
+            href="#projects"
+            class="block text-xl hover:text-pink-500 transition-colors"
+            >Projets</a
+            >
+        </li>
+        <li>
+            <a
+            href="#social-media"
+            class="block text-xl hover:text-pink-500 transition-colors"
+            >Réseaux</a
+            >
+        </li>
+        <li>
+            <a
+            href="#contact"
+            class="block text-xl hover:text-pink-500 transition-colors"
+            >Contact</a
+            >
+        </li>
+        </ul>
     </div>
-  </div>
+    </header>
+
+    <main>
+      <section
+        id="hero"
+        class="container mx-auto px-4 py-20 flex flex-col md:flex-row items-center justify-between"
+      >
+        <div class="md:w-1/2 text-center md:text-left mb-8 md:mb-0">
+          <h1 class="text-5xl md:text-6xl font-bold leading-tight">
+            Bonjour, je suis <span class="text-pink-500">ELSA TASSOU</span>
+          </h1>
+          <p class="mt-4 text-2xl text-gray-300">
+            Créateur de contenu et gestionnaire de réseaux sociaux.
+          </p>
+          <a href="#contact">
+          <button
+            class="mt-8 px-6 py-3 bg-pink-500 hover:bg-pink-600 text-white font-semibold rounded-full shadow-lg transition duration-300"
+          >
+            Contactez-moi
+          </button>            
+          </a>
+
+          <a href="./images/Elsa akouvi fafali TASSOU_20250921_200332_0000.pdf">
+                <button
+                    class="ml-6 mt-8 px-6 py-3 border  border-pink-500 hover:bg-pink-600 text-white font-semibold rounded-full shadow-lg transition duration-300"
+                >
+                    Voir mon CV
+                </button>            
+          </a>
+            
+        </div>
+        <div class="md:w-1/2 flex justify-center">
+          <img
+            src="./images/1.png"
+            alt="Votre photo de profil"
+            class="rounded-full w-64 h-64 md:w-80 md:h-80 object-contain border-4 p-0.5 border-pink-500 shadow-2xl"
+          />
+        </div>
+      </section>
+
+
+      <section id="about" class="container mx-auto px-4 py-16">
+        <div class="text-center">
+          <h2 class="text-4xl font-bold text-pink-500 mb-4">À propos de moi</h2>
+          <p class="max-w-3xl mx-auto text-lg text-gray-300 leading-relaxed text-left">
+Communicatrice créative et engagée, je développe des stratégies de communication adaptées aux besoins des
+ organisations et projets que j'accompagne. Mom expérience s'étend de la gestion des réseaux sociaux à la
+ création de contenus visuels et audiovisuels en passant par la mise en place de plans de communication
+ cohérents et impactants.Dotée d'une grande  capacité d'écoute et d'analyse, 
+je mets en valeur les messages clés avec authenticité afin de renforcer la visibilité, la cohésion et la
+ crédibilité des marques et des structures que je représente.
+          </p>
+        </div>
+      </section>
+
+
+      <section id="skills" class="container mx-auto px-4 py-16">
+        <h2 class="text-4xl font-bold text-center mb-10 text-pink-500">
+          Mes Compétences
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105"
+          >
+            <h3 class="text-2xl font-semibold text-white mb-2">
+              Création de visuels avec Canva
+            </h3>
+            <p class="text-gray-400">Publicités, affiches, flyers, bannières.</p>
+          </div>
+          <div
+            class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105"
+          >
+            <h3 class="text-2xl font-semibold text-white mb-2">
+              Conception et mise en œuvre de stratégies de réseaux sociaux
+            </h3>
+            <p class="text-gray-400">Facebook , Instagram, WhatsApp</p>
+          </div>
+          <div
+            class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105"
+          >
+            <h3 class="text-2xl font-semibold text-white mb-2">
+              Capacités rédactionnelles
+            </h3>
+            <p class="text-gray-400">Création de contenus écrits, Storytelling, 
+rédaction publicitaire, Création de scripts pour vidéos, Adaptation du ton et du style selon la
+ cible.</p>
+          </div>
+        </div>
+      </section>
 
 
 
-  <script src="./script.js"></script>
-</body>
+      <section id="projects" class="container mx-auto px-4 py-16">
+        <div class="container mx-auto px-4 py-16">
+    <h2 class="text-4xl font-bold text-center mb-10 text-pink-500">Mes Projets</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    
+        <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden transition duration-300 transform hover:scale-105">
+            <!-- <img src="https://via.placeholder.com/600x400" alt="Image du projet" class="w-full h-48 object-cover"/> -->
+            <div class="p-6">
+                <h3 class="text-2xl font-semibold text-white mb-2">
+                    Création de contenus vidéos promotionnels pour CARELJA
+                </h3>
+                <p class="text-gray-400 mb-4">
+                    Réalisation de deux vidéos promotionnelles pour la marque lors de leur passage à la télévision nationale. Captation, Montage et adaptation des contenus pour valoriser le produit et l'image de la marque.
+                </p>
+                <a href="https://youtu.be/v3j3o-aHF8A?si=etCLJvUqzsACcc7J" target="_blank"  class="text-pink-500 hover:underline">Voir le projet</a>
+            </div>
+        </div>
+
+        <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden transition duration-300 transform hover:scale-105">
+            <!-- <img src="https://via.placeholder.com/600x400" alt="Image du projet" class="w-full h-48 object-cover"/> -->
+            <div class="p-6">
+                <h3 class="text-2xl font-semibold text-white mb-2">
+                    Réalisation de deux reportages pour la chaîne Youtube VERT-TOGO
+                </h3>
+                <p class="text-gray-400 mb-4">
+                    Réalisation de deux reportages pour la chaîne Youtube VERT-TOGO spécialisée en journalisme. Captation, Montage et adaptation des contenus pour valoriser le produit et l'image de la marque.
+                </p>
+                <a href="https://youtu.be/sU5h_QAmJp0?si=mJ_07c96jyLoeX4c" target="_blank"  class="text-pink-500 hover:underline">Voir le projet</a>
+            </div>
+        </div>
+
+        <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden transition duration-300 transform hover:scale-105">
+            <!-- <img src="https://via.placeholder.com/600x400" alt="Image du projet" class="w-full h-48 object-cover"/> -->
+            <div class="p-6">
+                <h3 class="text-2xl font-semibold text-white mb-2">
+                    Responsable Community management impact centre chrétien Adidogomé
+                </h3>
+                <p class="text-gray-400 mb-4">
+                    Planification et création de contenus pour renforcer la visibilité et l'engagement.
+                </p>
+                <a href="https://www.facebook.com/share/1EGDtWpjSN/" target="_blank"  class="text-pink-500 hover:underline">Voir le projet</a>
+            </div>
+        </div>
+        
+    </div>
+</div>
+      </section>
+
+
+      <section id="social-media" class="container mx-auto px-4 py-16">
+        <h2 class="text-4xl font-bold text-center mb-10 text-pink-500">
+          Réseaux Sociaux que je gère
+        </h2>
+        <div class="flex justify-center items-center flex-wrap gap-8">
+          <a href="https://www.instagram.com/reel/C-V_SvUvFSd/?igsh=ZWZkanhwdDZ4Y3hr" target="_blank" class="hover:text-pink-400 transition duration-300">
+            <img
+              src="./images/instagram.png"
+              alt="Logo Instagram"
+              class="w-16 h-16"
+            />
+          </a>
+          <a href="https://www.tiktok.com/@atideka1?_t=ZM-8zv9ZLgtB1P&_r=1" target="_blank" class="hover:text-pink-400 transition duration-300">
+            <img
+              src="./images/social-media.png"
+              alt="Logo TikTok"
+              class="w-16 h-16"
+            /> 
+          </a>
+          <a href="https://www.youtube.com/@ICCTvAdidogome" target="_blank" class="hover:text-pink-400 transition duration-300">
+            <img
+              src="./images/youtube.png"
+              alt="Logo YouTube"
+              class="w-16 h-16"
+            />
+          </a>
+        <a href="https://www.facebook.com/share/1FDTmvWGdd/" target="_blank" class="hover:text-pink-400 transition duration-300">
+            <img
+              src="./images/communication.png"
+              alt="Logo Facebook"
+              class="w-16 h-16"
+            />
+          </a>
+        </div>
+      </section>
+
+
+      <section id="contact" class="container mx-auto px-4 py-16">
+        <h2 class="text-4xl font-bold text-center mb-10 text-pink-500">
+          Contactez-moi
+        </h2>
+        <div class="max-w-xl mx-auto bg-gray-800 p-8 rounded-lg shadow-lg">
+          <form id="form">
+            <div class="mb-4">
+              <label for="name" class="block text-gray-300 mb-2">Nom</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="w-full px-4 py-2 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-pink-500"
+                required
+              />
+            </div>
+            <div class="mb-4">
+              <label for="email" class="block text-gray-300 mb-2">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="w-full px-4 py-2 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-pink-500"
+                required
+              />
+            </div>
+            <div class="mb-4">
+              <label for="message" class="block text-gray-300 mb-2"
+                >Message</label
+              >
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                class="w-full px-4 py-2 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-pink-500"
+                required
+              ></textarea>
+            </div>
+            <div class="text-center">
+              <button
+                type="submit"
+                class="px-6 py-3 bg-pink-500 hover:bg-pink-600 text-white font-semibold rounded-full shadow-lg transition duration-300"
+              >
+                Envoyer le message
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-gray-800 text-gray-400 py-12">
+      <div class="container mx-auto px-4 text-center">
+        <div
+          class="flex flex-col md:flex-row justify-between items-center mb-6"
+        >
+          <p class="text-lg"> ELSA TASSOU. Tous droits réservés.</p>
+
+          <div class="mt-4 md:mt-0 flex flex-wrap justify-center space-x-6">
+            <a href="#about" class="hover:text-pink-500 transition-colors"
+              >À propos</a
+            >
+            <a href="#projects" class="hover:text-pink-500 transition-colors"
+              >Projets</a
+            >
+            <a href="#contact" class="hover:text-pink-500 transition-colors"
+              >Contact</a
+            >
+          </div>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
 </html>
